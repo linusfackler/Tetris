@@ -20,4 +20,9 @@ public class Piece : MonoBehaviour
         for (int i = 0; i < data.cells.Length; i++)
             this.cells[i] = (Vector3Int)data.cells[i];
     }
+
+    private void Update()
+    {
+        
+    }
 }
