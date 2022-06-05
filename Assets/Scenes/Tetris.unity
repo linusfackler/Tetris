@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383754421}
   - component: {fileID: 383754420}
+  - component: {fileID: 383754422}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -166,8 +167,35 @@ Transform:
   m_Children:
   - {fileID: 1102024650}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383754422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383754419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31edb89a840078a4bb8fe3425bf4e25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tetrominoes:
+  - tetromino: 0
+    tile: {fileID: 11400000, guid: 34d4f071aafab0548bca5df5731ffddd, type: 2}
+  - tetromino: 1
+    tile: {fileID: 11400000, guid: 2dd546fc163c35f4cb5321ec097e2537, type: 2}
+  - tetromino: 2
+    tile: {fileID: 11400000, guid: 760cee839199d1b4aa6f0c30db99fc6b, type: 2}
+  - tetromino: 3
+    tile: {fileID: 11400000, guid: 54f2a3cdb01fef54cab8f3c421909966, type: 2}
+  - tetromino: 4
+    tile: {fileID: 11400000, guid: db294ab2ebe3863429e43f380a88721f, type: 2}
+  - tetromino: 5
+    tile: {fileID: 11400000, guid: 0f06f5c090827ee4ca9d10ebd8d42dea, type: 2}
+  - tetromino: 6
+    tile: {fileID: 11400000, guid: 37d06a1a12c683a4e9f7138295807c5b, type: 2}
 --- !u!1 &429197030
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +647,7 @@ Transform:
   m_Children:
   - {fileID: 429197031}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923409759
 GameObject:
@@ -703,5 +731,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
