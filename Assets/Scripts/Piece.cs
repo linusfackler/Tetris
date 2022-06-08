@@ -62,17 +62,16 @@ public class Piece : MonoBehaviour
     {
         if (context.performed)
         {
+            this.board.Clear(this);
             HardDrop();
+            this.board.Set(this); 
         }
     }
 
     private void HardDrop()
     {
         while (MoveTile(Vector2Int.down))
-        {
-            print("Dropping");
             continue;
-        }
             
     }
 }
