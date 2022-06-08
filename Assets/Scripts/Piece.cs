@@ -33,11 +33,14 @@ public class Piece : MonoBehaviour
     {
         if(context.performed)
         {
-            // horizontal = (int)context.ReadValue<Vector2>().x;
-            // vertical   = (int)context.ReadValue<Vector2>().y;
+            horizontal = (int)context.ReadValue<Vector2>().x;
+            vertical   = (int)context.ReadValue<Vector2>().y;
+
+            print("horizontal: " + horizontal);
+            print("vertical: " + vertical);
             Vector3Int newPosition = this.position;
-            newPosition.x += context.ReadValue<Vector2Int>().x;
-            newPosition.y += context.ReadValue<Vector2Int>().y;
+            newPosition.x += horizontal;
+            newPosition.y += vertical;
 
             bool valid = this.board.IsValidPosition(this, newPosition);
 
