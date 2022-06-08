@@ -26,7 +26,7 @@ public class Piece : MonoBehaviour
 
     private void Update()
     {
-        
+        //this.board.Clear(this);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -38,7 +38,14 @@ public class Piece : MonoBehaviour
             Vector3Int newPosition = this.position;
             newPosition.x += context.ReadValue<Vector2Int>().x;
             newPosition.y += context.ReadValue<Vector2Int>().y;
+
+            bool valid = this.board.IsValidPosition(this, newPosition);
+
+            if (valid)
+                this.position = newPosition;
             
+            //return valid;
         }
+        //return false;
     }
 }
