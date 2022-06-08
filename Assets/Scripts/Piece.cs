@@ -30,7 +30,7 @@ public class Piece : MonoBehaviour
         // this.board.Set(this);
     }
 
-    public bool Move(InputAction.CallbackContext context)
+    public void Move(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
@@ -38,32 +38,37 @@ public class Piece : MonoBehaviour
             horizontal = (int)context.ReadValue<Vector2>().x;
             vertical   = (int)context.ReadValue<Vector2>().y;
 
-            print("horizontal: " + horizontal);
-            print("vertical: " + vertical);
+            MoveTile(new Vector2Int (horizontal, vertical));
+            this.board.Set(this); 
+        }
+        //return false;
+    }
+
+    private bool MoveTile(Vector2Int translation)
+    {
             Vector3Int newPosition = this.position;
-            newPosition.x += horizontal;
-            newPosition.y += vertical;
+            newPosition.x += translation.x;
+            newPosition.y += translation.y;
 
             bool valid = this.board.IsValidPosition(this, newPosition);
 
             if (valid)
-            {
                 this.position = newPosition;
-                print("is valid");
-            }
-                
-            this.board.Set(this);
+
             return valid;
-        }
-        return false;
     }
 
     public void Drop(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            while(Move(context))
-                continue;
+            HardDrop();
         }
+    }
+
+    private void HardDrop()
+    {
+        while (MoveTile(Vector2Int.down))
+            continue;
     }
 }
