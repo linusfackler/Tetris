@@ -74,4 +74,19 @@ public class Piece : MonoBehaviour
             continue;
             
     }
+
+    public void RotateLeft(InputAction.CallbackContext context)
+    {
+        Rotate(-1);
+    }
+
+    public void RotateRight(InputAction.CallbackContext context)
+    {
+        Rotate(1);
+    }
+
+    private void Rotate (int direction)
+    {
+
+    }
 }
