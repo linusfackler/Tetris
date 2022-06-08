@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Piece : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Piece : MonoBehaviour
     public TetrominoData data  { get; private set; }
     public Vector3Int position { get; private set; }
     public Vector3Int[] cells  { get; private set; }
+    private int horizontal;
+    private int vertical;
 
     public void Initialize(Board board, Vector3Int position, TetrominoData data)
     {
@@ -24,5 +27,18 @@ public class Piece : MonoBehaviour
     private void Update()
     {
         
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            // horizontal = (int)context.ReadValue<Vector2>().x;
+            // vertical   = (int)context.ReadValue<Vector2>().y;
+            Vector3Int newPosition = this.position;
+            newPosition.x += context.ReadValue<Vector2Int>().x;
+            newPosition.y += context.ReadValue<Vector2Int>().y;
+            
+        }
     }
 }
