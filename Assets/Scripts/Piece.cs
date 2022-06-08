@@ -69,6 +69,10 @@ public class Piece : MonoBehaviour
     private void HardDrop()
     {
         while (MoveTile(Vector2Int.down))
+        {
+            print("Dropping");
             continue;
+        }
+            
     }
 }
