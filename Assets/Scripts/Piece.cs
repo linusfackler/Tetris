@@ -26,13 +26,15 @@ public class Piece : MonoBehaviour
 
     private void Update()
     {
-        //this.board.Clear(this);
+        // this.board.Clear(this);
+        // this.board.Set(this);
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public bool Move(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
+            this.board.Clear(this);
             horizontal = (int)context.ReadValue<Vector2>().x;
             vertical   = (int)context.ReadValue<Vector2>().y;
 
@@ -45,10 +47,23 @@ public class Piece : MonoBehaviour
             bool valid = this.board.IsValidPosition(this, newPosition);
 
             if (valid)
+            {
                 this.position = newPosition;
-            
-            //return valid;
+                print("is valid");
+            }
+                
+            this.board.Set(this);
+            return valid;
         }
-        //return false;
+        return false;
+    }
+
+    public void Drop(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            while(Move(context))
+                continue;
+        }
     }
 }
