@@ -88,6 +88,5 @@ public class Piece : MonoBehaviour
     private void Rotate (int direction)
     {
         Debug.Log("Rotated");
-        print(direction);
     }
 }
