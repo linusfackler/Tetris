@@ -83,10 +83,11 @@ public class Piece : MonoBehaviour
     public void RotateRight(InputAction.CallbackContext context)
     {
         Rotate(1);
+        print("Rotated right");
     }
 
     private void Rotate (int direction)
     {
-        
+
     }
 }
