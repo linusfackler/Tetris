@@ -78,7 +78,6 @@ public class Piece : MonoBehaviour
     public void RotateLeft(InputAction.CallbackContext context)
     {
         Rotate(-1);
-        print("Rotated left");
     }
 
     public void RotateRight(InputAction.CallbackContext context)
