@@ -72,7 +72,8 @@ public class Piece : MonoBehaviour
     {
         while (MoveTile(Vector2Int.down))
             continue;
-            
+        
+        print("harddropped");
     }
 
     public void RotateLeft(InputAction.CallbackContext context)
