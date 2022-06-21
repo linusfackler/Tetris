@@ -74,7 +74,7 @@ public class Piece : MonoBehaviour
             continue;
         
         print("harddropped");
-        print("logon");
+        print("logon ");
     }
 
     public void RotateLeft(InputAction.CallbackContext context)
