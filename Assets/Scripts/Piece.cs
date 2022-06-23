@@ -73,8 +73,6 @@ public class Piece : MonoBehaviour
         while (MoveTile(Vector2Int.down))
             continue;
         
-        print("harddropped");
-        print("logon ");
     }
 
     public void RotateLeft(InputAction.CallbackContext context)
@@ -89,5 +87,6 @@ public class Piece : MonoBehaviour
 
     private void Rotate (int direction)
     {
+
     }
 }
