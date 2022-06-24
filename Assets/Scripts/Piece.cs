@@ -42,6 +42,8 @@ public class Piece : MonoBehaviour
             this.board.Set(this); 
         }
         //return false;
+        //changed from bool to void
+        //bool is now MoveTile
     }
 
     private bool MoveTile(Vector2Int translation)
