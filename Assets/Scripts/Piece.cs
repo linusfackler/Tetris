@@ -28,6 +28,7 @@ public class Piece : MonoBehaviour
     {
         // this.board.Clear(this);
         // this.board.Set(this);
+        // need to clear and set whenever moved
     }
 
     public void Move(InputAction.CallbackContext context)
