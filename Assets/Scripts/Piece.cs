@@ -59,6 +59,7 @@ public class Piece : MonoBehaviour
                 this.position = newPosition;
 
             return valid;
+            // return true if actually moved
     }
 
     public void Drop(InputAction.CallbackContext context)
