@@ -49,17 +49,17 @@ public class Piece : MonoBehaviour
 
     private bool MoveTile(Vector2Int translation)
     {
-            Vector3Int newPosition = this.position;
-            newPosition.x += translation.x;
-            newPosition.y += translation.y;
+        Vector3Int newPosition = this.position;
+        newPosition.x += translation.x;
+        newPosition.y += translation.y;
 
-            bool valid = this.board.IsValidPosition(this, newPosition);
+        bool valid = this.board.IsValidPosition(this, newPosition);
 
-            if (valid)
-                this.position = newPosition;
+        if (valid)
+            this.position = newPosition;
 
-            return valid;
-            // return true if actually moved
+        return valid;
+        // return true if actually moved
     }
 
     public void Drop(InputAction.CallbackContext context)
