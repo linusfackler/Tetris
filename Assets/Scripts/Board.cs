@@ -14,7 +14,8 @@ public class Board : MonoBehaviour
         get
         {
             Vector2Int position = new Vector2Int(-this.boardSize.x / 2, -this.boardSize.y / 2);
-            return new RectInt(position, this.boardSize);
+            return new RectInt(position, this.boardSize);    
+            //
         }
     }
 
