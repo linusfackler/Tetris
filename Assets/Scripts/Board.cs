@@ -31,6 +31,7 @@ public class Board : MonoBehaviour
     public void Start()
     {
         SpawnPiece();
+        // spawns piece whenever game starts
     }
 
     public void SpawnPiece()
