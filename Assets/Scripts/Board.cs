@@ -57,7 +57,7 @@ public class Board : MonoBehaviour
         {
             Vector3Int tilePosition = piece.cells[i] + piece.position;
             this.tilemap.SetTile(tilePosition, null);
-            //
+            // clears board
         }
     }
 
