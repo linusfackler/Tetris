@@ -31,6 +31,7 @@ public class Board : MonoBehaviour
     public void Start()
     {
         SpawnPiece();
+        // I just need pushs
     }
 
     public void SpawnPiece()
